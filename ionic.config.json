@@ -1,0 +1,7 @@
+{
+  "name": "transportador-william",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
