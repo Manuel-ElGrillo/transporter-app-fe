@@ -1,17 +1,76 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="add-circle-outline" size="large" class="tab-1__addIcon" routerLink="new-client"></ion-icon>
+      <!-- <ion-button>Agregar</ion-button> -->
+    </ion-buttons>
+    <ion-title>Clientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Clientes</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-list *ngIf="true; else NoClients">
+    
+    <ion-item *ngFor="let client of clients">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>
+        <h2 class="item-padding">
+          {{client.name}}
+        </h2>
+        <p class="item-padding">Dirección: {{client.address}}</p>
+        <!-- <p class="item-padding">Viaje frecuente: {{client.commonSite}}</p> -->
+        <p class="item-padding item-flex">
+          Tipo de cliente:
+          <ion-badge *ngIf="client.clientStatus === 'Premium'" color="success">{{client.clientStatus}}</ion-badge>
+          <ion-badge *ngIf="client.clientStatus === 'Normal'" color="tertiary">{{client.clientStatus}}</ion-badge>
+          <ion-badge *ngIf="client.clientStatus === 'Ladilla'" color="danger">{{client.clientStatus}}</ion-badge>
+        </p>
+        <p class="item-padding item-flex">
+          Estado:
+          <ion-badge *ngIf="client.refered === true" color="warning">Referido</ion-badge>
+          <ion-badge *ngIf="client.refered === false" color="warning">Directo</ion-badge>
+        </p>
+        <p class="item-padding item-flex">
+          Teléfono: 
+          <a href="">{{client.phone}}</a>
+        </p>
+        <p class="item-padding item-flex">
+          Deuda: 
+          <ion-badge *ngIf="client.debt > 0" color="danger">{{client.debt}} USD</ion-badge>
+          <ion-badge *ngIf="client.debt === 0" color="success">{{client.debt}} USD</ion-badge>
+        </p>
+      </ion-label>
+
+      <ion-button routerLink="edit-client">
+        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button color="danger" routerLink="delete-client">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ng-template #NoClients>
+    <ion-item class="template-message">
+      <ion-label>
+        <h2>Por favor crea un cliente nuevo.</h2>
+      </ion-label>
+    </ion-item>
+  </ng-template>
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+
+
 </ion-content>

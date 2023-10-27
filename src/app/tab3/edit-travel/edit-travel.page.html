@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar viaje programado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+
+    <ion-item>
+      <ion-input label="Cliente" labelPlacement="floating" placeholder="" helperText="Indique el nombre del cliente"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input label="Origen" labelPlacement="floating" placeholder="" helperText="Indique desde dónde va a salir el cliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Destino" labelPlacement="floating" placeholder="" helperText="Indique el destino a donde quiere llegar el cliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Fecha" labelPlacement="floating" placeholder="" helperText="Indique la fecha del viaje"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Hora" labelPlacement="floating" placeholder="" helperText="Indique la hora del cliente y si es AM o PM"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Precio" labelPlacement="floating" placeholder="" helperText="Indique el costo de este viaje"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Completado" label-placement="floating">
+        <ion-select-option value="premium">Sí</ion-select-option>
+        <ion-select-option value="normal">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Pagado" label-placement="floating">
+        <ion-select-option value="premium">Sí</ion-select-option>
+        <ion-select-option value="normal">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button class="add-btn">Editar</ion-button>
+
+</ion-content>

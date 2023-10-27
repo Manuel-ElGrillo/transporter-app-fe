@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+  
+    <ion-item>
+      <ion-input label="Nombre" labelPlacement="floating" placeholder="John Wick" helperText="Modifique el nombre o apodo con el que quiere registrar a este cliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Dirección" labelPlacement="floating" placeholder="El Rosal" helperText="Modifique el lugar de donde es su cliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Tipo de cliente" label-placement="floating">
+        <ion-select-option value="premium">Premium</ion-select-option>
+        <ion-select-option value="normal">Normal</ion-select-option>
+        <ion-select-option value="ladilla">Ladilla</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Estado" label-placement="floating">
+        <ion-select-option value="referido">Referido</ion-select-option>
+        <ion-select-option value="directo">Directo</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Teléfono" labelPlacement="floating" placeholder="+580123456789" helperText="Modifique el número de teléfono del cliente con el código de área, no intruzca guiones ni espacios"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Deuda" type="number" labelPlacement="floating" placeholder="" helperText="Indique la dueda que tiene el cliente actualmente"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button class="edit-btn">Editar</ion-button>
+ 
+</ion-content>

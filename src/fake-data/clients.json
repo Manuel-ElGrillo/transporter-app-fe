@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Jhon Wick",
+        "address": "Continental Hotel",
+        "commonSite": "Continental Hotel",
+        "clientStatus": "Premium",
+        "refered": true,
+        "phone": "+0123456789",
+        "debt": 0
+    },  
+    {
+        "id": 1,
+        "name": "Vlad Tepes",
+        "address": "Transilvania 1455",
+        "commonSite": "Castillo Principal",
+        "clientStatus": "Ladilla",
+        "refered": false,
+        "phone": "+0123456789",
+        "debt": 15
+    },
+    {
+        "id":2,
+        "name": "Batusai el Destajador",
+        "address": "Kyoto",
+        "commonSite": "N / A",
+        "clientStatus": "Normal",
+        "refered": true,
+        "phone": "+0123456789",
+        "debt": 0
+    }
+]

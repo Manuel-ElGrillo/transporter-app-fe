@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "clientName": "Donald Trump",
+        "origin": "La Casa Blanca",
+        "destination": "Trump Tower",
+        "date": "27/10/2023",
+        "hour": "09:00 AM",
+        "completed": true,
+        "debt": true
+    },
+    {
+        "id": 1,
+        "clientName": "Javier Milei",
+        "origin": "Puerto Madero",
+        "destination": "La Casa Rosada",
+        "date": "27/10/2023",
+        "hour": "09:00 AM",
+        "completed": false,
+        "debt": true
+    },
+    {
+        "id": 2,
+        "clientName": "Wladimir Putin",
+        "origin": "El Kremlin",
+        "destination": "Kiev",
+        "date": "27/10/2023",
+        "hour": "09:00 AM",
+        "completed": false,
+        "debt": false
+    }
+]

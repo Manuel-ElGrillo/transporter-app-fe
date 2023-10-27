@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "from": "",
+        "to": "Aeropuerto",
+        "price": 25
+    },
+    {
+        "id": 1,
+        "from": "",
+        "to": "Mercado",
+        "price": 20
+    },
+    {
+        "id": 3,
+        "from": "",
+        "to": "Hospital",
+        "price": 15
+    }
+]

@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tarifa Nueva</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+  
+    <ion-item>
+      <ion-input label="Origen" labelPlacement="floating" placeholder="" helperText="Indique desde dónde va a salir el cliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Destino" label-placement="floating">
+        <ion-select-option value="aeropuerto">Aeropuerto</ion-select-option>
+        <ion-select-option value="mercado">Mercado</ion-select-option>
+        <ion-select-option value="hospital">Hospital</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Precio" labelPlacement="floating" placeholder="" helperText="Indique el costo de este viaje"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+
+  <ion-button class="add-btn">Agregar</ion-button>
+
+  <ion-button class="add-btn">Chequear en Uber</ion-button>
+
+  <ion-button class="add-btn">Chequear en TaxiTour</ion-button>
+  
+
+</ion-content>

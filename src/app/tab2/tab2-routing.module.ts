@@ -6,6 +6,18 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: 'edit-price',
+    loadChildren: () => import('./edit-price/edit-price.module').then( m => m.EditPricePageModule)
+  },
+  {
+    path: 'delete-price',
+    loadChildren: () => import('./delete-price/delete-price.module').then( m => m.DeletePricePageModule)
+  },
+  {
+    path: 'new-price',
+    loadChildren: () => import('./new-price/new-price.module').then( m => m.NewPricePageModule)
   }
 ];
 

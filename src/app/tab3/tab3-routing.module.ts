@@ -6,6 +6,18 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },
+  {
+    path: 'new-travel',
+    loadChildren: () => import('./new-travel/new-travel.module').then( m => m.NewTravelPageModule)
+  },
+  {
+    path: 'edit-travel',
+    loadChildren: () => import('./edit-travel/edit-travel.module').then( m => m.EditTravelPageModule)
+  },
+  {
+    path: 'delete-travel',
+    loadChildren: () => import('./delete-travel/delete-travel.module').then( m => m.DeleteTravelPageModule)
   }
 ];
 

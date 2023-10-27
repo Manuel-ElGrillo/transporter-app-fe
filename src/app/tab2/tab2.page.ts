@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import data from "../../fake-data/prices.json";
+import { Prices } from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-tab2',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+
+  public prices: Prices[] = data;
 
   constructor() {}
 

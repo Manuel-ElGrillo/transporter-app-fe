@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Eliminar viaje programado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <ion-item>
+    <ion-label>¿Seguro quiere eliminar este Viaje Programado?</ion-label>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon slot="start" name="alarm-outline" size="large"></ion-icon>
+
+    <ion-label>
+      <h2 class="item-padding">Cliente</h2>
+      <p class="item-padding">Origen: </p>
+      <p class="item-padding">Destino: </p>
+      <p class="item-padding">Fecha:</p>
+      <p class="item-padding">Hora: </p>
+    </ion-label>
+
+  </ion-item>
+
+  <ion-button color="danger" class="delete-btn">
+    Eliminar
+  </ion-button>
+
+</ion-content>

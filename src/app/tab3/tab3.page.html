@@ -1,17 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="add-circle-outline" size="large" class="tab-1__addIcon" routerLink="new-travel"></ion-icon>
+    </ion-buttons>
+    <ion-title>Viajes Programados</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list>
+
+    <ion-item *ngFor="let travel of travels">
+
+      <ion-icon slot="start" name="alarm-outline" size="large"></ion-icon>
+
+      <ion-label>
+        <h2 class="item-padding">{{travel.clientName}}</h2>
+        <p class="item-padding">Origen: {{travel.origin}}</p>
+        <p class="item-padding">Destino: {{travel.destination}}</p>
+        <p class="item-padding">Fecha: {{travel.date}}</p>
+        <p class="item-padding">Hora: {{travel.hour}}</p>
+        <p class="item-padding item-flex">Completada: 
+          <ion-badge *ngIf="travel.completed === true" color="success">Sí</ion-badge>
+          <ion-badge *ngIf="travel.completed === false" color="warning">No</ion-badge>
+        </p>
+        <p class="item-padding item-flex">Pagada: 
+          <ion-badge *ngIf="travel.debt === true" color="success">Sí</ion-badge>
+          <ion-badge *ngIf="travel.debt === false" color="warning">No</ion-badge> 
+        </p>
+      </ion-label>
+
+      <ion-button routerLink="edit-travel">
+        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button color="danger" routerLink="delete-travel">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+    
+  </ion-list>
+
 </ion-content>

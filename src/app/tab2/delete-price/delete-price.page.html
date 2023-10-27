@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Eliminar Tarifa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>¿Seguro quiere eliminar esta Tarifa?</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+
+      <h2 class="item-padding">
+        Destino: Aeropuerto
+      </h2>
+
+      <p class="item-padding item-flex">
+        Origen:
+        <ion-text color="primary">Aeropuerto</ion-text>
+      </p>
+
+      <p class="item-padding item-flex">
+        Precio:
+        <ion-text color="primary">25 USD</ion-text>
+      </p>
+
+    </ion-label>
+  </ion-item> 
+  
+  <ion-button color="danger" class="delete-btn">
+    Eliminar
+  </ion-button>
+
+</ion-content>

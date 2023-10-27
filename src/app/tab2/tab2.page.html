@@ -1,17 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="add-circle-outline" size="large" class="tab-1__addIcon" routerLink="new-price"></ion-icon>
+      <!-- <ion-button>Agregar</ion-button> -->
+    </ion-buttons>
+    <ion-title>Tarifas Comunes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list>
+
+    <ion-item *ngFor="let price of prices">
+
+      <ion-item [ngSwitch]="price.to">
+        <ion-icon *ngSwitchCase="'Aeropuerto'" slot="start" name="airplane-outline" size="large"></ion-icon>
+        <ion-icon *ngSwitchCase="'Mercado'" slot="start" name="cart-outline" size="large"></ion-icon>
+        <ion-icon *ngSwitchCase="'Hospital'" slot="start" name="medkit-outline" size="large"></ion-icon>
+      </ion-item>
+
+      <ion-label>
+        
+        <p class="item-padding">Desde: {{price.from}}</p>
+        <p class="item-padding">Hasta: {{price.to}}</p>
+        <p class="item-padding item-flex">
+          Costo: 
+          <ion-badge color="success">{{price.price}} USD</ion-badge>
+        </p>
+      </ion-label>
+
+      <ion-button routerLink="edit-price">
+        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button color="danger" routerLink="delete-price">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+    
+  </ion-list>
+
 </ion-content>
